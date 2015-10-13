@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_treeview", "http://localhost/test_treeview/test_treeview.csproj", "{EB326AF0-A316-4CA3-B912-C8FF1B09A66E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EB326AF0-A316-4CA3-B912-C8FF1B09A66E}.Debug.ActiveCfg = Debug|.NET
+		{EB326AF0-A316-4CA3-B912-C8FF1B09A66E}.Debug.Build.0 = Debug|.NET
+		{EB326AF0-A316-4CA3-B912-C8FF1B09A66E}.Release.ActiveCfg = Release|.NET
+		{EB326AF0-A316-4CA3-B912-C8FF1B09A66E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

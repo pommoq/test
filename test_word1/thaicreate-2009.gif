@@ -1,0 +1,148 @@
+0 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] vendor: GenuntelineI
+Apr 08 15:12:58.937: vmx| CPUID[1]   name: Intel(R) Core(TM)2 Duo CPU     T6600  @ 2.20GHz
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000000, 0: 0x0000000d 0x756e6547 0x6c65746e 0x49656e69
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000001, 0: 0x0001067a 0x01020800 0x0408e39d 0xbfebfbff
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000002, 0: 0x05b0b101 0x005657f0 0x00000000 0x2cb4307d
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000003, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000004, 0: 0x04000121 0x01c0003f 0x0000003f 0x00000001
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000005, 0: 0x00000040 0x00000040 0x00000003 0x00022220
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000006, 0: 0x00000001 0x00000002 0x00000003 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000007, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000008, 0: 0x00000400 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 00000009, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 0000000a, 0: 0x07280202 0x00000000 0x00000000 0x00000503
+Apr 08 15:12:58.937: vmx| CPUID[1] level 0000000b, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 0000000c, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 0000000d, 0: 0x00000003 0x00000240 0x00000240 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000000, 0: 0x80000008 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000001, 0: 0x00000000 0x00000000 0x00000001 0x20100000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000002, 0: 0x65746e49 0x2952286c 0x726f4320 0x4d542865
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000003, 0: 0x44203229 0x43206f75 0x20205550 0x54202020
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000004, 0: 0x30303636 0x20402020 0x30322e32 0x007a4847
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000005, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000006, 0: 0x00000000 0x00000000 0x08006040 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000007, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID[1] level 80000008, 0: 0x00003024 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID vendor: GenuntelineI
+Apr 08 15:12:58.937: vmx| hostCPUID   name: Intel(R) Core(TM)2 Duo CPU     T6600  @ 2.20GHz
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000000, 0: 0x0000000d 0x756e6547 0x6c65746e 0x49656e69
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000001, 0: 0x0001067a 0x00020800 0x0408e39d 0xbfebfbff
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000002, 0: 0x05b0b101 0x005657f0 0x00000000 0x2cb4307d
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000003, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000004, 0: 0x04000121 0x01c0003f 0x0000003f 0x00000001
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000005, 0: 0x00000040 0x00000040 0x00000003 0x00022220
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000006, 0: 0x00000001 0x00000002 0x00000003 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000007, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000008, 0: 0x00000400 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 00000009, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 0000000a, 0: 0x07280202 0x00000000 0x00000000 0x00000503
+Apr 08 15:12:58.937: vmx| hostCPUID level 0000000b, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 0000000c, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 0000000d, 0: 0x00000003 0x00000240 0x00000240 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000000, 0: 0x80000008 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000001, 0: 0x00000000 0x00000000 0x00000001 0x20100000
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000002, 0: 0x65746e49 0x2952286c 0x726f4320 0x4d542865
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000003, 0: 0x44203229 0x43206f75 0x20205550 0x54202020
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000004, 0: 0x30303636 0x20402020 0x30322e32 0x007a4847
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000005, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000006, 0: 0x00000000 0x00000000 0x08006040 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000007, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| hostCPUID level 80000008, 0: 0x00003024 0x00000000 0x00000000 0x00000000
+Apr 08 15:12:58.937: vmx| CPUID Maximum Physical Address Bits supported across all CPUs: 36
+Apr 08 15:12:58.968: vmx| Host ACPI: can't find SRAT
+Apr 08 15:12:58.968: vmx| Host: SRAT tables not found in memory
+Apr 08 15:12:59.156: vmx| ACL_InitCapabilities: current IPC thread
+Apr 08 15:12:59.156: vmx| ACL_InitCapabilities: done
+Apr 08 15:12:59.156: vmx| changing directory to D:\Software for Training AD2008andExchange2007sp2\Image for Workshop\Client\Windows XP Professional+Outlook2007\.
+Apr 08 15:12:59.156: vmx| Config file: D:\Software for Training AD2008andExchange2007sp2\Image for Workshop\Client\Windows XP Professional+Outlook2007\Windows XP Professional.vmx
+Apr 08 15:12:59.218: vmx| VMXVmdb_LoadRawConfig: Loading raw config
+Apr 08 15:12:59.265: vmx| VMXVmdbCbVmVmxExecState: Exec state change requested to state poweredOn without reset
+Apr 08 15:12:59.265: vmx| PowerOn
+Apr 08 15:12:59.265: vmx| VMX_PowerOn: VMX build 126130, UI build 126130
+Apr 08 15:12:59.265: vmx| Host: WIN32 highest NUMA node 0
+Apr 08 15:12:59.265: vmx| Host: WIN32 NUMA node 0, CPU mask 0x0000000000000003
+Apr 08 15:12:59.265: vmx| VMXVmdb_LoadRawConfig: Loading raw config
+Apr 08 15:12:59.265: vmx| HOST Windows version 5.1, build 2600, platform 2, "Service Pack 3", SMP
+Apr 08 15:12:59.265: vmx| DICT --- USER PREFERENCES
+Apr 08 15:12:59.265: vmx| DICT       pref.eula.0.appName = VMware Workstation
+Apr 08 15:12:59.265: vmx| DICT   pref.eula.0.buildNumber = 126130
+Apr 08 15:12:59.265: vmx| DICT     pref.mruDest0.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT  pref.mruDest0.destString = 
+Apr 08 15:12:59.265: vmx| DICT        pref.mruDest0.user = 
+Apr 08 15:12:59.265: vmx| DICT     pref.mruDest1.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT  pref.mruDest1.destString = 
+Apr 08 15:12:59.265: vmx| DICT        pref.mruDest1.user = 
+Apr 08 15:12:59.265: vmx| DICT     pref.mruDest2.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT  pref.mruDest2.destString = 
+Apr 08 15:12:59.265: vmx| DICT        pref.mruDest2.user = 
+Apr 08 15:12:59.265: vmx| DICT     pref.mruDest3.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT  pref.mruDest3.destString = 
+Apr 08 15:12:59.265: vmx| DICT        pref.mruDest3.user = 
+Apr 08 15:12:59.265: vmx| DICT     pref.mruDest4.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT  pref.mruDest4.destString = 
+Apr 08 15:12:59.265: vmx| DICT        pref.mruDest4.user = 
+Apr 08 15:12:59.265: vmx| DICT     pref.mruDest5.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT  pref.mruDest5.destString = 
+Apr 08 15:12:59.265: vmx| DICT        pref.mruDest5.user = 
+Apr 08 15:12:59.265: vmx| DICT     pref.mruDest6.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT  pref.mruDest6.destString = 
+Apr 08 15:12:59.265: vmx| DICT        pref.mruDest6.user = 
+Apr 08 15:12:59.265: vmx| DICT     pref.mruDest7.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT  pref.mruDest7.destString = 
+Apr 08 15:12:59.265: vmx| DICT        pref.mruDest7.user = 
+Apr 08 15:12:59.265: vmx| DICT      pref.mruATS0.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT    pref.mruATS0.atsString = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS0.domain = 
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS0.user = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS0.secure = FALSE
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS0.port = 0
+Apr 08 15:12:59.265: vmx| DICT      pref.mruATS1.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT    pref.mruATS1.atsString = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS1.domain = 
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS1.user = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS1.secure = FALSE
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS1.port = 0
+Apr 08 15:12:59.265: vmx| DICT      pref.mruATS2.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT    pref.mruATS2.atsString = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS2.domain = 
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS2.user = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS2.secure = FALSE
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS2.port = 0
+Apr 08 15:12:59.265: vmx| DICT      pref.mruATS3.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT    pref.mruATS3.atsString = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS3.domain = 
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS3.user = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS3.secure = FALSE
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS3.port = 0
+Apr 08 15:12:59.265: vmx| DICT      pref.mruATS4.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT    pref.mruATS4.atsString = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS4.domain = 
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS4.user = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS4.secure = FALSE
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS4.port = 0
+Apr 08 15:12:59.265: vmx| DICT      pref.mruATS5.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT    pref.mruATS5.atsString = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS5.domain = 
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS5.user = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS5.secure = FALSE
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS5.port = 0
+Apr 08 15:12:59.265: vmx| DICT      pref.mruATS6.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT    pref.mruATS6.atsString = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS6.domain = 
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS6.user = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS6.secure = FALSE
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS6.port = 0
+Apr 08 15:12:59.265: vmx| DICT      pref.mruATS7.present = FALSE
+Apr 08 15:12:59.265: vmx| DICT    pref.mruATS7.atsString = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS7.domain = 
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS7.user = 
+Apr 08 15:12:59.265: vmx| DICT       pref.mruATS7.secure = FALSE
+Apr 08 15:12:59.265: vmx| DICT         pref.mruATS7.port = 0
+Apr 08 15:12:59.265: vmx| DICT   pref.registrationViewed = FALSE
+Apr 08 15:12:59.265: vmx| DICT       pref.usbDev.maxDevs = 0
+Apr 08 15:12:59.265: vmx| DICT pref.keyboardAndMouse.maxProfiles = 0
+Apr 08 15:12:59.265: vmx| DICT   pref.view.toolbars.list = _SEP_,POWER_OFF,SUSPEND,POWER_ON,RESET,POLICIES,PKG_SETTINGS,NEW_PKG,POCKET_ACE,PREVIEW,SNAPSHOT,REVERT,SNAPSHOT_MANAGER,FAVORITES,QUICK_SWITCH,FULL_SCREEN,UNITY,SUMMARY,APPLIANCE,CONSOLE,QUICK_MINIMIZE,FILE_EXIT,INSTANCE_DETAILS,INSTANCE_REACT,INSTANCE_DEACT,REPLAY_PLAY,REPLAY_RECORD
+Apr 08 15:12:59.265: vmx| DICT pref.ws.openedObj0.present = TRUE
+Apr 08 15:12:59.265: vmx| DICT   pref.ws.openedObj0.name = Home
+Apr 08 15:12:59.265: vmx| D

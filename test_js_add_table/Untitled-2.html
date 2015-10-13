@@ -1,0 +1,72 @@
+
+<script>
+function addColumn(tblId)
+{
+	var tblHeadObj = document.getElementById(tblId).tHead;
+	for (var h=0; h<tblHeadObj.rows.length; h++) {
+		var newTH = document.createElement('th');
+		tblHeadObj.rows[h].appendChild(newTH);
+		newTH.innerHTML = '[th] row:' + h + ', cell: ' + (tblHeadObj.rows[h].cells.length - 1)
+	}
+
+	var tblBodyObj = document.getElementById(tblId).tBodies[0];
+	for (var i=0; i<tblBodyObj.rows.length; i++) {
+		var newCell = tblBodyObj.rows[i].insertCell(0);
+		newCell.innerHTML = '[td] row:' + i + ', cell: ' + (tblBodyObj.rows[i].cells.length - 1)
+	}
+}
+function deleteColumn(tblId)
+{
+	var allRows = document.getElementById(tblId).rows;
+	for (var i=0; i<allRows.length; i++) {
+		if (allRows[i].cells.length > 1) {
+			allRows[i].deleteCell(-1);
+		}
+	}
+}
+</script>
+<body>
+<form>
+<p>
+<input type="button" value="add column" onclick="addColumn('tblSample')" />
+<input type="button" value="delete column" onclick="deleteColumn('tblSample')" />
+</p>
+<table id="tblSample" border="1">
+<thead>
+  <TR>
+    <Th align="middle" rowSpan="3">Year</Th>
+    <Th id="hd2" noWrap align="middle" colSpan="2"  rowspan="1" name="hd1">Ã¶Â¹µì </Th>
+    <Th align="middle" rowSpan="3">GTotal</Th>
+  </TR>
+  <TR>
+    <Th id="hd6" noWrap align="middle" colSpan="2" name="hd2">Export </Th>
+  </TR>
+  <TR>
+     <Th id="hd14" noWrap align="middle" name="hd6">Unit </Th>
+    <Th id="hd741" noWrap align="middle" name="hd6">Amount (Million Baht) </Th>
+  </TR>
+</thead>
+<tbody>
+  <TR nowrap>
+    <TD noWrap align="middle">2007</TD>
+    <TD noWrap align="right">690,830.16</TD>
+    <TD noWrap align="right">469,303.35</TD>
+    <TD noWrap align="right">1,160,133.51</TD>
+  </TR>
+  <TR nowrap>
+    <TD noWrap align="middle">2008</TD>
+    <TD noWrap align="right">599,024.00</TD>
+    <TD noWrap align="right">401,356.44</TD>
+    <TD noWrap align="right">1,000,380.44</TD>
+  </TR>
+  <TR>
+    <TD noWrap align="middle">GTotal</TD>
+    <TD noWrap align="right">1,289,854.16</TD>
+    <TD noWrap align="right">870,659.79</TD>
+    <TD noWrap align="right">2,160,513.95</TD>
+  </TR>
+</tbody>
+</table>
+</form>
+
+</body>

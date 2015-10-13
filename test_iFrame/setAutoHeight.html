@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<title>Untitled Document</title>
+</head>
+<style>
+body {
+	font-family:tahoma;
+	font-size:10pt;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #f3f5fa;
+}
+table{
+	font-family:tahoma;
+	font-size:10pt;
+}
+td.num{
+	text-align:right;
+}
+td.Hcenter{
+	background-color: #f3f5fa;
+	text-align:center;
+}
+td.Hleft{
+	background-color: #f3f5fa;
+	text-align:left;
+}
+</style>
+
+<script>
+function autoheight(fname , divname) { 
+	var _f = document.getElementById(fname); 
+	_f.style.display = "none"
+	var _y = document.getElementById(divname); 
+	var _x ;
+//	 _x = window.frames[i].document.body.innerHTML; 	
+	 _x = eval(fname +".document.body.innerHTML")
+	 _y.innerHTML = _x 
+
+	
+} 
+</script>
+<div id="div_boi"></div>
+<iframe id="f1" src="http://localhost/thaiauto/db/PartMaker/report/BOI.asp" frameborder="1" onload="autoheight(this.id,'div_boi');"></iframe>
+
+
+</body>
+</html>

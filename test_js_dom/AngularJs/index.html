@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    #div-head {
+        height: 70px;
+        background-color: #808080;
+    }
+    
+    #div-body {
+        background-color: #ffffff;
+        min-height: 70px;
+    }
+    
+    #div-foot {
+        height: 70px;
+        background-color: #c0c0c0;
+    }
+    </style>
+    <link rel="stylesheet" href="/bootstrap-test/bootstrap/css/bootstrap.css">
+</head>
+
+<body ng-app="APP">
+    <div id="div-head" ng-controller="HController">
+        <h1>{{Title}}</h1>
+    </div>
+    <div id="div-body" ng-controller="BController" ng-init="start()">
+        <h1>{{Title}}</h1>
+        <hr/>
+        <input type="text" ng-model="searchName">
+        <input type="text" ng-model="searchPhone">
+        <hr/>
+        <div id="div-datatable">
+            <button ng-click="newData()">New Data</button>
+            <table class="table table-striped table-hover">
+                <tbody>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th><a href="" ng-click="orderFieldName = 'id';flag_ASC = !flag_ASC">ID</a></th>
+                            <th><a href="" ng-click="orderFieldName = 'name';flag_ASC = !flag_ASC">Name</a></th>
+                            <th><a href="" ng-click="orderFieldName = 'phone';flag_ASC = !flag_ASC">Phone</a></th>
+                            <th>...</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5"> Total :{{table_filter.length}} / {{Tables.length}}</td>
+                        </tr>
+                    </tfoot>
+                    <tr ng-repeat="d in 
+					table_filter = (Tables | filter : {name: searchName , phone : searchPhone} ) 
+					| orderBy : orderFieldName : flag_ASC">
+                        <td>{{$index+1}}</td>
+                        <td>{{d.id}}</td>
+                        <td>{{d.name}}</td>
+                        <td>{{d.phone}}</td>
+                        <td>
+                            <button ng-click="editData(d)">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="div-editbox" style="display:none;">
+            Name :
+            <input type="text" ng-model="EditData.name">
+            <br> phone :
+            <input type="text" ng-model="EditData.phone">
+            <br>
+            <button ng-click="saveData()">Save</button>
+            <button ng-click="cancelData()">Cancel</button>
+        </div>
+    </div>
+    <div id="div-foot" ng-controller="FController">
+        <h1>{{Title}}</h1>
+    </div>
+</body>
+
+</html>
+<script src="../../js/jquery-1.5.1.min.js"></script>
+<script src="../../js/angular.min.js"></script>
+<script type="text/javascript">
+/*klsdjfljsdf;
+liekjidfl;
+aksjdf*/
+
+</script>
+<script src="./app/app.js"></script>
+<script src="./app/h-controller.js"></script>
+<script src="./app/f-controller.js"></script>
+<script src="./app/b-controller.js"></script>
+<script>
+
+</script>

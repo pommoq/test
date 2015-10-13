@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<configuration date="2014/06/02" author="e.World Technology Ltd.">
+<project id="{324ED72D-DE20-46F7-B12E-7AF8CE8711A6}" file="" name="project1" product="ASPMaker" version="11.0" datetime="2014/06/02 14:04:40" languagefolder="lang" userlevel="">
+<table id="z40news" name="@news" caption="@news" userlevel="" priv="1"/>
+<table id="admins" name="admins" caption="admins" userlevel="" priv="1"/>
+<table id="banner" name="banner" caption="banner" userlevel="" priv="1"/>
+<table id="banner_logo_01" name="banner_logo_01" caption="banner logo 01" userlevel="" priv="1"/>
+<table id="banner_logo_01_th" name="banner_logo_01_th" caption="banner logo 01 th" userlevel="" priv="1"/>
+<table id="banner_logo_02" name="banner_logo_02" caption="banner logo 02" userlevel="" priv="1"/>
+<table id="banner_logo_02_th" name="banner_logo_02_th" caption="banner logo 02 th" userlevel="" priv="1"/>
+<table id="banner_th" name="banner_th" caption="banner th" userlevel="" priv="1"/>
+<table id="company" name="company" caption="company" userlevel="" priv="1"/>
+<table id="company_th" name="company_th" caption="company th" userlevel="" priv="1"/>
+<table id="department" name="department" caption="department" userlevel="" priv="1"/>
+<table id="department_th" name="department_th" caption="department th" userlevel="" priv="1"/>
+<table id="e_library" name="e_library" caption="e library" userlevel="" priv="1"/>
+<table id="e_library_th" name="e_library_th" caption="e library th" userlevel="" priv="1"/>
+<table id="eventcalendar" name="eventcalendar" caption="eventcalendar" userlevel="" priv="1"/>
+<table id="eventcalendar_pdf_file" name="eventcalendar_pdf_file" caption="eventcalendar pdf file" userlevel="" priv="1"/>
+<table id="eventcalendar_pdf_file_th" name="eventcalendar_pdf_file_th" caption="eventcalendar pdf file th" userlevel="" priv="1"/>
+<table id="eventcalendar_th" name="eventcalendar_th" caption="eventcalendar th" userlevel="" priv="1"/>
+<table id="homepage" name="homepage" caption="homepage" userlevel="" priv="1"/>
+<table id="job" name="job" caption="job" userlevel="" priv="1"/>
+<table id="job_file" name="job_file" caption="job file" userlevel="" priv="1"/>
+<table id="job_file_th" name="job_file_th" caption="job file th" userlevel="" priv="1"/>
+<table id="job_th" name="job_th" caption="job th" userlevel="" priv="1"/>
+<table id="journal" name="journal" caption="journal" userlevel="" priv="1"/>
+<table id="news" name="news" caption="news" userlevel="" priv="1"/>
+<table id="news_pdf_file" name="news_pdf_file" caption="news pdf file" userlevel="" priv="1"/>
+<table id="news_pdf_file_th" name="news_pdf_file_th" caption="news pdf file th" userlevel="" priv="1"/>
+<table id="news_sale" name="news_sale" caption="news sale" userlevel="" priv="1"/>
+<table id="news_th" name="news_th" caption="news th" userlevel="" priv="1"/>
+<table id="office" name="office" caption="office" userlevel="" priv="1"/>
+<table id="office_th" name="office_th" caption="office th" userlevel="" priv="1"/>
+<table id="person" name="person" caption="person" userlevel="" priv="1"/>
+<table id="person_th" name="person_th" caption="person th" userlevel="" priv="1"/>
+<table id="research" name="research" caption="research" userlevel="" priv="1"/>
+<table id="research_pdf_file" name="research_pdf_file" caption="research pdf file" userlevel="" priv="1"/>
+<table id="research_pdf_file_th" name="research_pdf_file_th" caption="research pdf file th" userlevel="" priv="1"/>
+<table id="research_th" name="research_th" caption="research th" userlevel="" priv="1"/>
+<table id="sys_admin_menu" name="sys_admin_menu" caption="sys admin menu" userlevel="" priv="1"/>
+<table id="sys_menu" name="sys_menu" caption="sys menu" userlevel="" priv="1"/>
+<table id="vehicle_record" name="vehicle_record" caption="vehicle record" userlevel="" priv="1"/>
+<table id="vehicle_record_th" name="vehicle_record_th" caption="vehicle record th" userlevel="" priv="1"/>
+<table id="video" name="video" caption="video" userlevel="" priv="1"/>
+<table id="video_th" name="video_th" caption="video th" userlevel="" priv="1"/>
+<table id="Query2" name="Query2" caption="Query 2" userlevel="" priv="1"/>
+</project></configuration>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<title>Untitled Document</title>
+<script language="JavaScript" type="text/javascript" src="prototype.js"></script>
+
+</head>
+
+<body>
+
+<table id="t1" border="1">
+<tr id='tr1'>
+	<td rowspan="2" style="background-color:#99FF00" onMouseOver="ss(this)" onMouseOut="ss1(this)">ssssssssssss&nbsp;ssssssssssss&nbsp;</td>
+		<td colspan="3" style="background-color:#99FF00" onMouseOver="ss(this)" onMouseOut="ss1(this)">ssssssssssss&nbsp;ssssssssssss&nbsp;ssssssssssss&nbsp;</td>
+  </tr>
+<tr id='tr2'>
+	<td onMouseOver="ss(this)" onMouseOut="ss1(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+			<td onMouseOver="ss(this)" onMouseOut="ss1(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+				<td onMouseOver="ss(this)" onMouseOut="ss1(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+</tr>
+<tr id='tr3'>
+	<td onMouseOver="ss(this)" onMouseOut="ss1(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+		<td onMouseOver="ss(this)" onMouseOut="ss1(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+			<td onMouseOver="ss(this)" onMouseOut="ss1(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+				<td onMouseOver="ss(this)" onMouseOut="ss1(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+</tr>
+<tr id='tr4'>
+		<td id="td1" onMouseOver="ss(this)" onMouseOut="ss1(this)" onClick="test(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+		<td onMouseOver="ss(this)" onMouseOut="ss1(this)" onClick="test(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+		<td onMouseOver="ss(this)" onMouseOut="ss1(this)" onClick="test(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+		<td onMouseOver="ss(this)" onMouseOut="ss1(this)" onClick="test(this)" style="background-color:#99FF00">ssssssssssss&nbsp;</td>
+</tr>
+<tr>
+<td parent="ss" id="rr" >sssss</td></tr>
+</table>
+<input id="test" name="test" onClick="test()">
+<div id="t">ssss</div>
+<script>
+alert($('rr').parent)
+window.onload = function(){
+	Event.observe('td1','click',e1)
+}
+function e1(event){
+	alert(Event.element(event).id)
+}
+function test(obj)
+{
+		$('t').innerHTML = ' '+obj.parentNode.rowIndex  +  ',' +(obj.cellIndex) 
+}
+function ss(obj)
+{
+	obj.style.backgroundColor = "#FFcccc"
+	test(obj)
+}
+function ss1(obj)
+{
+	obj.style.backgroundColor = "#99FF00"
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form>
+<div id="" style=" background-color:#999900;position:absolute; left:20px; top:px;z-index:999;width:20%;"> 
+asdfasdf<br />
+dfasfas<br />
+dsfasdf<br />
+dsfadf<br />
+sadfasfdsfasdfasfsdf
+</div>
+<div id="" style=" background-color:#CCCCCC;position:absolute; left:20px; top:px;z-index:4;width:20%;"> 
+<table border="1">
+      <tr> 
+	    
+        <td width="20%" valign="top" nowrap> 
+		  <div align="right">แผนก:&nbsp;&nbsp;</div>		
+		</td>
+        <td width="80%" height=0 nowrap> 
+<div id="" style=" background-color:#CCCCCC;position:absolute; left:20px; top:px;z-index:4;width:20%;">
+		<select style="z-index:0" id='S1_DepCode' name='S1_DepCode' title='แผนก[S1_DepCode]' ><option value='' > --แผนก-- </option><option value='ทดสอบ' >ทดสอบ</option><option value='เทคโนโลยีการผลิต' >เทคโนโลยีการผลิต</option><option value='ธุรการ' >ธุรการ</option><option value='บุคคล' >ทรัพยากรบุคคล</option><option value='บัญชีและการเงิน' SELECTED>บัญชีและการเงิน</option><option value='พัฒนาบุคลากร' >พัฒนาบุคลากร</option><option value='สารสนเทศ' >สารสนเทศ</option><option value='นโยบายและแผน' >นโยบายและแผน</option><option value='วิเคราะห์ธุรกิจ' >วิเคราะห์ธุรกิจ</option><option value='เทคโนโลยียานยนต์' >เทคโนโลยียานยนต์</option><option value='-' >-</option><option value=''></option></select> 
+		</div>
+		</td>
+      </tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td><input type="button" onclick="ShowLayer()" value="ShowLayer" /></td></tr>
+<tr><td>&nbsp;</td><td><input type="button" onclick="HideLayer()" value="HideLayer" /></td></tr>
+</table>
+</div>
+</body>
+</form>
+
+</html>
+<script>
+function hideDropdown() {
+    // hide all dropdowns on the page
+
+        
+    // looping through all forms on the page
+	
+    for (f = 0; f < document.forms.length; f++)
+    {
+        var elements = document.forms[f].elements;
+        // looping through all elements on certain form
+
+        for (e = 0; e < elements.length; e++)
+        {
+		alert(elements[e].type)
+            if (elements[e].type == "select-one")
+            {
+                elements[e].style.display = 'none';
+            }
+        }
+    }
+        
+    // show layer
+
+    var layer = document.getElementById('layer');
+    layer.style.display = 'block';
+}
+
+function showDropdown() {
+    // hide all dropdowns on the page
+
+    for (f = 0; f < document.forms.length; f++)
+    {
+        var elements = document.forms[f].elements;
+        for (e = 0; e < elements.length; e++)
+        {
+            if (elements[e].type == "select-one")
+            {
+                elements[e].style.display = 'block';
+            }
+        }
+    }
+    // hide layer
+
+    var layer = document.getElementById('layer');
+    layer.style.display = 'none';
+}
+</script>

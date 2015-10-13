@@ -1,0 +1,148 @@
+
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>calendar with javascript dom</title>
+	<style type="text/css">
+		.container{
+			border:1px solid #808080;
+			display: inline-block;
+			width: 420px;
+			border-radius: 10px;
+			background-color: #8C8C8C;
+		}
+		.button{
+			cursor:pointer;
+			border:0px;
+			background-color: #f0f0f0;
+			width:50px;
+			height: 50px;
+			margin: 5px;
+			font-size: 20pt;
+			font-weight: bold;
+			border-radius: 25px;
+		}
+		.button:hover{
+			background-color: #808080;
+		}
+	</style>
+</head>
+<body>
+	<div id="div-cal"></div>	
+</body>
+</html>
+<script type="text/javascript">
+	function Calendar (div_id,callback) {
+		var div_container = document.getElementById(div_id) ;
+		var div_h;
+		var div_body;
+		var title;
+		var date_callback = callback;
+		var curMonth = new Date();
+		//-------------------------------------------------
+		this.init = function(){
+			curMonth.setDate(1);
+
+			div_container.setAttribute("class","container")
+			div_container.innerHTML = "";
+			div_h = document.createElement("div") ;
+			div_body = document.createElement("div") ;
+			
+			var cmdPrev = document.createElement("button") ;
+			var cmdNext = document.createElement("button") ;
+		
+			cmdPrev.innerHTML = "<"	;
+			cmdPrev.setAttribute("class","button");
+			cmdPrev.addEventListener("click",this.movePrev);
+
+			cmdNext.innerHTML = ">"	;
+			cmdNext.setAttribute("class","button");
+			cmdNext.addEventListener("click",this.moveNext);
+
+			div_h.appendChild(cmdPrev);
+			div_h.appendChild(cmdNext);
+			
+			title = document.createElement("span");
+			div_h.appendChild(title);
+
+			div_container.appendChild(div_h) ;
+			div_container.appendChild(div_body) ;
+
+			generate();
+
+		}
+		//-------------------------------------------------
+		//this.generate = function(){
+		function generate(){
+			title.innerHTML = curMonth.getFullYear()+" : "+(curMonth.getMonth()+1);
+
+			div_body.innerHTML = "";
+
+			var loopDate = new Date(curMonth.getFullYear()
+									, curMonth.getMonth()
+									, curMonth.getDate()
+									,0,0,0,0);
+			//หาวันสุดท้ายของเดือนปัจจุบัน
+			loopDate.setMonth(loopDate.getMonth()+1) ;
+			loopDate.setDate(loopDate.getDate()-1);
+
+			var iMaxDate = loopDate.getDate();
+			//-------------------------------------------------
+			//วันที่ของเดือนที่แล้ว
+			var iFirstDay = curMonth.getDay();
+			for(i=0;i<iFirstDay;i++) {
+				var button = document.createElement("button") ;
+				button.setAttribute("class" , "button") ;
+				button.innerHTML=("&nbsp;");
+
+				div_body.appendChild(button);
+			}
+			//-------------------------------------------------
+			//สร้างวันที่
+			loopDate.setDate(1);
+			for(i=0;i<iMaxDate;i++) {
+				var button = document.createElement("button") ;
+				button.setAttribute("class" , "button") ;
+				button.innerHTML=loopDate.getDate();
+				button.setAttribute("data-date" , loopDate.toDateString()) ;
+				button.addEventListener("click",function(e){
+					var button_data = e.target.dataset.date;
+					date_callback(button_data);
+				});
+				div_body.appendChild(button);
+				loopDate.setDate(loopDate.getDate()+1);
+			}
+			//-------------------------------------------------
+			//
+			loopDate.setDate(loopDate.getDate()-1);
+			var iLastDay = loopDate.getDay();
+			
+			for(i=iLastDay;i< 6;i++) {
+				var button = document.createElement("button") ;
+				button.setAttribute("class" , "button") ;
+				button.innerHTML=("&nbsp;");
+
+				div_body.appendChild(button);
+			}
+			//-------------------------------------------------
+		}
+		//-------------------------------------------------
+		this.moveNext = function(){
+
+			curMonth.setMonth(curMonth.getMonth()+1) ;
+			generate();
+
+		}
+		//-------------------------------------------------
+		this.movePrev = function(){
+			//alert(1)
+			curMonth.setMonth(curMonth.getMonth()-1)
+			generate();
+		}
+		
+		this.init();
+	}
+	var c = new Calendar("div-cal",function(data){
+		alert(data)
+	});
+</script>

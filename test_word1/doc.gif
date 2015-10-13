@@ -1,0 +1,40 @@
+<% Option Explicit %>
+<html>
+<head>
+<title>ThaiCreate.Com ASP & Word.Application</title>
+</head>
+<body>
+<%
+	
+
+	Const wdAlignParagraphCenter = 1
+
+	Dim Wrd,WrdDoc,DocName
+	Dim MyRange1
+	Set Wrd = CreateObject("Word.Application")
+	DocName = "MyDoc/OpenWord.doc"
+	Wrd.Application.Visible = False
+
+	Set WrdDoc = Wrd.Documents.Open(Server.MapPath("thaicreate.dot"))
+	
+	Set MyRange1 = WrdDoc.Range()
+	With MyRange1
+		.ParagraphFormat.Alignment = wdAlignParagraphCenter
+		.Font.Name = "Verdana"
+		.Font.Size = "30"		
+		.Font.Bold = True
+		.InsertBefore(vbCrLf&vbCrLf&"www.ThaiCreate.Com"&vbCrLf&"Version 2009"&vbCrLf)
+	End With
+
+	Set MyRange1 = WrdDoc.Paragraphs.Add.Range
+	MyRange1.InlineShapes.AddPicture Server.MapPath("thaicreate-2009.gif")
+	MyRange1.InlineShapes.AddPicture Server.MapPath("Doc.gif")
+
+
+	Set MyRange1 = WrdDoc.Paragraphs.Add.Range
+	With MyRange1
+		.ParagraphFormat.Alignment = wdAlignParagraphCenter
+		.Font.Name = "Verdana"
+		.Font.Size = "13"		
+		.Font.Bold = True
+		.InsertBefore(v

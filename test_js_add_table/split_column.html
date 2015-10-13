@@ -1,0 +1,110 @@
+<script language="Javascript" type="text/javascript">
+function createrow() {
+  //อ่านข้อความที่จะแสดงในแถวใหม่
+  var val = document.getElementById('tdname').value
+  //สร้างแถวใหม่
+  var row = document.createElement("tr")
+  //สร้าง col ใหม่
+  var cell = document.createElement("td");
+  //ใส่ข้อความลงใน col
+  var cellText = document.createTextNode(val);
+  cell.appendChild(cellText);
+  //แทรก col ลงใน row
+  row.appendChild(cell);
+  
+  var cell = document.createElement("td");
+  //ใส่ข้อความลงใน col
+  var cellText = document.createTextNode(val);
+  cell.appendChild(cellText);
+  //แทรก col ลงใน row
+  row.appendChild(cell);
+  
+  
+  //แทรก row ลงใน table
+  var tblBody = document.getElementById("tblBody");
+  tblBody.appendChild(row);
+  
+  }
+  
+  function split_node(name,col)
+  {
+ 	    var mynode = document.getElementById(name)
+		var td_row = mynode.parentNode.rowIndex
+		var td_col = mynode.cellIndex
+		var table = mynode.parentNode.parentNode
+
+		r = table.insertRow(table.rows.length)
+		
+		alert('row:'+td_row+' , col:'+td_col)
+		
+		for(i=0 ; i < td_row  0 ; i++)
+			{
+				var i_r = table.rows[i].cells[0].rowSpan  -1
+				var i_c = 0
+				if( i < i_r)
+				{
+				table.rows[i].cells[td_col].colSpan = table.rows[i].cells[td_col].colSpan + 1
+
+			}
+		
+  }
+  function addColumn(tblId)
+{
+	var tblHeadObj = document.getElementById(tblId).tHead;
+	for (var h=0; h<tblHeadObj.rows.length; h++) {
+		var newTH = document.createElement('th');
+		tblHeadObj.rows[h].appendChild(newTH);
+		newTH.innerHTML = '[th] row:' + h + ', cell: ' + (tblHeadObj.rows[h].cells.length - 1)
+	}
+
+	var tblBodyObj = document.getElementById(tblId).tBodies[0];
+	for (var i=0; i<tblBodyObj.rows.length; i++) {
+		var newCell = tblBodyObj.rows[i].insertCell(-1);
+		newCell.innerHTML = '[td] row:' + i + ', cell: ' + (tblBodyObj.rows[i].cells.length - 1)
+	}
+}
+</script>
+
+<body>
+<input type="text" name="tdname" id="tdname" /><input type="button" name="create" value="Create." onClick="addColumn('tblSample')" />
+<table border="1"><tbody id="tblBody"><tr id="temp"><td>d</td><td>d</td></tr></tbody></table>
+<br>
+<br>
+<br>
+<table cellspacing="0" cellpadding="0" border="1" id="t1">
+  <TR>
+    <TD align="middle" rowSpan="3">Year</TD>
+    <TD id="hd2" noWrap align="middle" colSpan="2"  rowspan="1" name="hd1">รถยนต์ </TD>
+    <TD align="middle" rowSpan="3">GTotal</TD>
+  </TR>
+  <TR>
+    <TD id="hd6" noWrap align="middle" colSpan="2" name="hd2">Export </TD>
+  </TR>
+  <TR>
+     <TD id="hd14" noWrap align="middle" name="hd6">Unit </TD>
+    <TD id="hd741" noWrap align="middle" name="hd6">Amount (Million Baht) </TD>
+  </TR>
+  <TR nowrap>
+    <TD noWrap align="middle">2007</TD>
+    <TD noWrap align="right">690,830.16</TD>
+    <TD noWrap align="right">469,303.35</TD>
+    <TD noWrap align="right">1,160,133.51</TD>
+  </TR>
+  <TR nowrap>
+    <TD noWrap align="middle">2008</TD>
+    <TD noWrap align="right">599,024.00</TD>
+    <TD noWrap align="right">401,356.44</TD>
+    <TD noWrap align="right">1,000,380.44</TD>
+  </TR>
+  <TR>
+    <TD noWrap align="middle">GTotal</TD>
+    <TD noWrap align="right">1,289,854.16</TD>
+    <TD noWrap align="right">870,659.79</TD>
+    <TD noWrap align="right">2,160,513.95</TD>
+  </TR>
+</table><br>
+<br>
+<br>
+
+
+</body>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<script type="text/javascript" src="../thaiauto/website/Automotive-Summit2014/js/jquery.js"></script>
+<!--script type="text/javascript" src="../thaiauto/website/Automotive-Summit2014/js/google-spreadsheet.js"></script-->
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <input type="button" name="b1" id="b1" value="ok" />
+</form>
+
+<script>
+  function listEvents(root) {
+    var feed = root.feed;
+    var entries = feed.entry || [];
+    var html = ['<ul>'];
+    for (var i = 0; i < entries.length; ++i) {
+      var entry = entries[i];
+      var title = entry.title.$t;
+      var value = entry.content.$t;
+      var operated = value *3;
+alert("Title:"+title+"    Value:"+value+ "   x3="+operated); 
+      html.push('<li>', value, ' ', title, '</li>');
+    }
+    html.push('</ul>');
+    document.getElementById("demo").innerHTML = html.join("");
+  }
+var mydata  
+function getValue_GoogleSheet(){
+    localStorage.clear();
+	var key = "0Ag8unGEXmXqMdGVoUFE4NDlLb1dRcGNQRHF6QzNnUHc";
+	var Range = "A10:G10"
+//	var sheet = "od6" //sheet1
+	var sheet = "od7" //sheet2	
+	var URL = "https://spreadsheets.google.com/feeds/cells/"+key+"/"+sheet+"/public/values?alt=json-in-script&range="+Range+"&callback=?"	
+
+	$.getJSON( URL, function (data) {	
+		for(i=0;i<data.feed.entry.length ;i++){
+			alert(data.feed.entry[i]['title']['$t'] + ":"+ data.feed.entry[i]['gs$cell']['$t'])		
+		}
+	});
+}
+
+
+$(document).ready(function() {
+test();
+	$("#b1").click(function(){
+
+		var key = "0Ag8unGEXmXqMdGVoUFE4NDlLb1dRcGNQRHF6QzNnUHc";
+
+		var URL = "https://docs.google.com/spreadsheet/pub?key="+key+"&gid=1&single=true&output=txt&range=";
+		$.ajax(URL + "A100").done(function(result){ 
+			alert(result)
+			document.getElementById("demo").innerHTML=result; });
+	});
+});
+
+</script>
+<div id="demo"></div>
+</body>
+</html>

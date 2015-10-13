@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Maps</title>
+    <link rel="stylesheet" media="all" href="../jquery-jvectormap.css" />
+    <script src="assets/jquery-1.8.2.js"></script>
+    <script src="../jquery-jvectormap.js"></script>
+    <script src="../lib/jquery-mousewheel.js"></script>
+    <script src="../src/jvectormap.js"></script>
+    <script src="../src/abstract-element.js"></script>
+    <script src="../src/abstract-canvas-element.js"></script>
+    <script src="../src/abstract-shape-element.js"></script>
+    <script src="../src/svg-element.js"></script>
+    <script src="../src/svg-group-element.js"></script>
+    <script src="../src/svg-canvas-element.js"></script>
+    <script src="../src/svg-shape-element.js"></script>
+    <script src="../src/svg-path-element.js"></script>
+    <script src="../src/svg-circle-element.js"></script>
+    <script src="../src/vml-element.js"></script>
+    <script src="../src/vml-group-element.js"></script>
+    <script src="../src/vml-canvas-element.js"></script>
+    <script src="../src/vml-shape-element.js"></script>
+    <script src="../src/vml-path-element.js"></script>
+    <script src="../src/vml-circle-element.js"></script>
+    <script src="../src/map-object.js"></script>
+    <script src="../src/region.js"></script>
+    <script src="../src/marker.js"></script>
+    <script src="../src/vector-canvas.js"></script>
+    <script src="../src/simple-scale.js"></script>
+    <script src="../src/ordinal-scale.js"></script>
+    <script src="../src/numeric-scale.js"></script>
+    <script src="../src/color-scale.js"></script>
+    <script src="../src/data-series.js"></script>
+    <script src="../src/proj.js"></script>
+    <script src="../src/map.js"></script>
+    <script src="assets/jquery-jvectormap-th-merc.js"></script>
+    <script src="assets/jquery-jvectormap-world-mill-en.js"></script>
+    <script>
+    var exScale = ['#C8EEFF', '#0071A4'];
+    var imScale = ['#FEE1E1', '#670404'];
+    var imData = {
+        "JP": 137550.38,
+        "ID": 79198.58,
+        "CN": 55754.25,
+        "DE": 40653.43,
+        "MY": 30152.80,
+        "PH": 17865.44,
+        "VN": 17767.61,
+        "IN": 13327.33,
+        "KR": 7377.45,
+        "US": 7341.22,
+        "SG": 5604.98,
+        "GB": 5214.71,
+        "SE": 5152.28,
+        "HU": 5146.87,
+        "FR": 4484.47,
+        "IT": 4271.44,
+        "TH": 2366.07,
+        "AU": 2107.36,
+        "ES": 1997.25,
+        "TW": 1920.19,
+        "MX": 1612.58,
+        "FI": 1390.51,
+        "NL": 1296.74,
+        "BR": 1022.39,
+        "UA": 740.94,
+        "PL": 607.53,
+        "ZA": 598.78,
+        "AT": 520.93,
+        "CZ": 428.86,
+        "CA": 235.71,
+        "BE": 195.61,
+        "KH": 86.78,
+        "SK": 79.25,
+        "MM": 78.20,
+        "AE": 73.39,
+        "LA": 63.22,
+        "AR": 55.87,
+        "IE": 52.80,
+        "DK": 46.09,
+        "EE": 42.06,
+        "SI": 34.16,
+        "RO": 28.46,
+        "PT": 24.32,
+        "RU": 8.17,
+        "HK": 7.41,
+        "NZ": 7.30,
+        "GR": 5.60,
+        "LK": 2.54,
+        "LT": 2.36,
+        "OM": 2.24,
+        "IR": 1.78,
+        "QA": 1.45,
+        "LV": 0.81,
+        "BD": 0.60,
+        "PK": 0.55,
+        "LU": 0.44,
+        "MT": 0.30,
+        "BG": 0.21,
+        "BO": 0.19,
+        "SA": 0.09,
+        "CL": 0.07,
+        "CY": 0.06,
+        "GE": 0.05,
+        "KW": 0.02,
+        "YE": 0.02,
+        "MU": 0.01,
+        "PE": 0.01,
+        "BH": 0.01,
+        "BN": 0.00,
+        "KZ": 0.00,
+        "MG": 0.00,
+        "CS": 0.00,
+        "AM": 0.00,
+    }
+    var exData = {
+        "AU": 297294.41,
+        "ID": 188924.10,
+        "MY": 168311.21,
+        "PH": 122641.95,
+        "VN": 62588.36,
+        "JP": 51518.10,
+        "GB": 49450.94,
+        "LA": 30762.36,
+        "NZ": 29556.56,
+        "SA": 27727.31,
+        "AE": 25821.64,
+        "CN": 23711.45,
+        "IN": 22591.48,
+        "CL": 21345.82,
+        "DE": 21002.08,
+        "SG": 17916.69,
+        "KH": 17598.90,
+        "US": 17590.03,
+        "BE": 16914.60,
+        "MX": 15654.47,
+        "OM": 15502.00,
+        "ZA": 15452.94,
+        "MM": 14999.74,
+        "NL": 14619.39,
+        "IT": 14162.43,
+        "BR": 8222.03,
+        "FR": 8166.70,
+        "PE": 7412.95,
+        "ES": 6315.74,
+        "RU": 6127.58,
+        "HU": 6024.55,
+        "PK": 5074.46,
+        "TW": 4356.36,
+        "KR": 4009.59,
+        "AR": 3880.66,
+        "KW": 3800.96,
+        "DK": 3591.08,
+        "QA": 3181.53,
+        "SE": 2687.38,
+        "CZ": 2499.58,
+        "LK": 2154.41,
+        "CA": 2072.23,
+        "AT": 2059.22,
+        "BN": 2004.03,
+        "PL": 1948.37,
+        "GR": 1928.35,
+        "BH": 1692.66,
+        "BD": 1526.30,
+        "SI": 1365.87,
+        "FI": 1223.98,
+        "PT": 1211.71,
+        "BO": 946.46,
+        "IE": 743.31,
+        "SK": 626.91,
+        "YE": 613.72,
+        "KE": 608.75,
+        "PG": 596.58,
+        "MZ": 556.43,
+        "PY": 553.74,
+        "HK": 514.27,
+        "KZ": 392.45,
+        "MU": 346.78,
+        "RO": 238.35,
+        "NP": 233.54,
+        "MV": 230.99,
+        "CY": 213.22,
+        "MT": 212.10,
+        "LV": 203.39,
+        "IR": 157.22,
+        "UY": 123.64,
+        "UA": 123.06,
+        "MG": 99.06,
+        "BT": 93.34,
+        "TZ": 89.83,
+        "EE": 62.14,
+        "AZ": 59.67,
+        "GE": 52.32,
+        "LT": 48.70,
+        "LU": 19.51,
+        "SC": 10.67,
+        "UZ": 2.85,
+        "BG": 1.04,
+        "BY": 0.01,
+    };
+
+
+    $(function() {
+        var map = new jvm.Map({
+            container: $('.map'),
+            map: 'th_merc'
+        });
+
+        $('.show-button').click(function() {
+            $('.map').show();
+            map.updateSize();
+        });
+    });
+
+    $(function() {
+        //$('#map-th').vectorMap();
+        exMap = showData("ex", exData, exScale);
+        imMap = showData("im", imData, imScale);
+        $(".jvectormap-zoomin").hide();
+        $(".jvectormap-zoomout").hide();
+        showLegend(exMap,"key-ex");
+        showLegend(imMap,"key-im");
+
+
+    })
+    function showLegend(mapObj,divKey){
+        //var mapObj = exMap//$('#map').vectorMap('get', 'mapObject');
+        var steps = 5;
+        var w = "30";
+        var minV = mapObj.series.regions[0].scale.clearMinValue;
+        var maxV = mapObj.series.regions[0].scale.clearMaxValue;
+        
+        maxV = maxV + (1000 - (maxV % 1000))
+        var color ="1";
+        var color1 ="";
+        var colorMin = mapObj.series.regions[0].scale.getValue(minV);
+        var i = -2
+
+        //for (var i = -2; i<=steps; i++) {
+        //
+        $('#'+divKey).append('<div class="legend" style="background-color:#fff;">min</div>');
+        while(color != color1) {
+
+          var val =  Math.pow(steps ,i);
+          var val1 =  Math.pow(steps ,i+1);
+          i++
+          if (val==0) {val = 0.1}
+          
+          color = mapObj.series.regions[0].scale.getValue(val);
+          color1 = mapObj.series.regions[0].scale.getValue(val1);
+            $('#'+divKey).append('<div class="legend" style="width:' + w + 'px;background-color:' + color + ';">&nbsp;</div>');
+
+        } 
+        $('#'+divKey).append('<div class="legend">max ' + maxV + '</div>');
+
+    }
+
+var exMap , imMap
+    function showData(n, d, s) {
+
+//    map1 = $('#map-th-' + n).vectorMap({
+   var map = new jvm.Map({
+        container: $('#map-th-' + n),      
+        map: 'world_mill_en',
+        backgroundColor:"white",
+        regionStyle:{
+            initial: {
+              fill: '#ccc',
+              "fill-opacity": 1,
+              stroke: 'gray',
+              "stroke-width": 0.5,
+              "stroke-opacity": 0.5
+            },
+        },
+        series: {
+            regions: [{
+                scale: s,
+                attribute: 'fill',
+                values: d,
+                normalizeFunction: 'polynomial'
+            }]
+        },
+        onRegionTipShow: function(e, el, code) {
+          var etitle
+          if (n == 'ex') {
+              etitle = "Export"
+          } else {
+              etitle = "Import"
+          }
+          if (d[code]){
+            el.html(el.html() + ' (' + etitle + ' HS87 : ' + d[code] + ' MBaht)');
+          }
+        },
+        onRegionClick:function(e, code) {
+          alert(code)
+        }
+    });
+
+    return map;  
+
+    }
+    </script>
+    <style>
+      .legend{
+          width:30px;
+          height:30px;
+          display: inline-block;
+          float: left;
+          font-size: 10px;
+          text-align: center;
+      /*    border:solid 1px #fff;*/
+      }
+    </style>
+</head>
+
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>Export HS87</th>
+      <th>Import HS87</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+        <div id="map-th-ex" style="width: 600px; height: 400px"></div>
+        <div id="key-ex"></div>
+    </td>
+    <td>
+      <div id="map-th-im" style="width: 600px; height: 400px"></div>
+      <div id="key-im"></div>
+    </td>
+  </tr>
+</table>
+    
+    
+</body>
+
+</html>

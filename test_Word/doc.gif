@@ -1,0 +1,36 @@
+<%
+
+
+set p = server.createObject("DypsRTF.Document")
+p.Header = "hello"
+
+p.WriteBlankLine
+p.WriteBlankLine
+
+'Set the font and alignment
+p.setFont("arial")
+p.alignjustify
+
+p.writebold("Rich Text Format (RTF) Specification, version 1.6")
+p.WriteBlankLine
+p.WriteBlankLine
+
+p.WriteText("Microsoft Corporation")
+p.writeTab
+p.WriteText("May 1999")
+
+p.WriteText("Summary: ")
+  
+  
+p.WriteText("The Rich Text Format (RTF) Specification "&_
+"provides a format for text and graphics interchange that"&_
+" can be used with different output devices, operating "&_
+"environments, and operating systems. RTF uses the American "&_
+"National Standards Institute (ANSI), PC-8, Macintosh, or "&_
+"IBM PC character set to control the representation and "&_
+"formatting of a document, both on the screen and in print."&_
+" With the RTF Specification, documents created "&_
+"under different operating systems and "&_
+"with different software applications "&_
+"can be transferred between those operating systems "&_
+"and 

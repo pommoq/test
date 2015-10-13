@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+		.card{
+			width: 50px;	
+			height: 80px;
+			margin: 5px;
+			font-size: 18pt;
+			font-weight: bold;
+			float: left;
+			background-color: #c0c0c0;
+			border-radius: 3px;
+			border: 0px;
+		}
+		.cardoff{
+			background-color: #880088;
+		}
+		.cardoffup{
+			background-color: #880000;
+			color: #ffffff;
+		}		
+		#table{
+			width: 300px;
+			font-weight
+		}
+		a:link
+		a:visited
+		a:hover
+		a:active
+    </style>
+</head>
+
+<body>
+
+<button onclick="initcard()">Start</button>
+<div id="table"></div>
+
+</body>
+
+</html>
+<script>
+var cards = [1,2,3,4,5,6,7,8,9,0];
+var curValue = -1;
+var Score = 0;
+var Over = false;
+function initcard(){
+	swap( );
+	var table = document.getElementById('table');
+	table.innerHTML = "";
+	curValue = -1;
+	Score = 0;
+	Over = false;
+	for (var i = 0 ; i<10 ; i++) {
+		var btn = document.createElement("button");
+		btn.setAttribute('class', 'card');
+		btn.setAttribute('data-index', ""+i);
+		btn.addEventListener('click', clickCard);
+		btn.setAttribute('id', 'b'+i);
+		btn.innerHTML = cards[i];
+
+
+		
+
+		table.appendChild(btn);
+	}
+	offCard(2000);
+}
+
+function swap( ) {
+	for (var i = 0 ;i < 50 ; i++){
+		
+		var iSwap1 =  parseInt( Math.random() * 10);
+		var iSwap2 =  parseInt( Math.random() * 10);
+		console.log(iSwap1 +' ' + iSwap2);
+		var temp = cards[iSwap1];
+		
+		cards[iSwap1] = cards[iSwap2];
+		cards[iSwap2] = temp;
+	}
+}	
+function offCard(t) {
+	//var table = document.getElementById('table');
+	var Tcards = document.getElementsByClassName('card');
+
+	setTimeout(function() {
+		for (var i = 0; i< Tcards.length ; i++) {
+			Tcards[i].setAttribute('class', 'card cardoff');
+			Tcards[i].innerHTML = "&nbsp;";
+		}	
+	}, t);
+}
+
+function upCard(t) {
+	//var table = document.getElementById('table');
+	var Tcards = document.getElementsByTagName('button');
+
+	
+		for (var i = 0; i< Tcards.length ; i++) {
+			if (Tcards[i].getAttribute('class') == "card cardoff"){
+				Tcards[i].innerHTML = cards[Tcards[i].dataset.index]
+				Tcards[i].setAttribute('class', 'card cardoffup');
+			}
+		}	
+	
+}
+
+function clickCard(){
+	if (Over){
+		return;
+	}
+	console.log(this);
+	this.innerHTML = cards[this.dataset.index]
+	console.log(cards[this.dataset.index]);
+	
+	if (curValue > cards[this.dataset.index]){
+		upCard()
+		Over = true;
+		alert("Game Over. \n Score = " + Score)
+	}else{
+		 Score++;
+		 this.setAttribute('class', 'card');
+		 if(Score == 10){
+		 	alert("สุดยอด");
+		 	Over = true;
+
+		 }
+	}
+	curValue= cards[this.dataset.index]
+}
+initcard()
+
+
+</script>

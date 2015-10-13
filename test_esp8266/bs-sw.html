@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css">
+	<script src="//code.jquery.com/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style>
+		.bootstrap-switch .bootstrap-switch-handle-on{
+			font-size: 22pt;
+			padding-top: 30px;
+		}
+		.bootstrap-switch .bootstrap-switch-handle-off{
+			font-size: 22pt;
+			padding-top: 30px;
+		}
+		.bootstrap-switch .bootstrap-switch-container{
+			height: 80px;
+		}
+	</style>
+
+	<script type="text/javascript">
+	var h = "http://192.168.2.36/";
+		$(document).ready(function() {
+			$(".sw").bootstrapSwitch({"handleWidth":"80"});
+			$(".sw").on('switchChange.bootstrapSwitch', function(event, state) {
+			  sendCommand(this.id,this,state);
+			});
+			fn2();
+			
+		});
+		function sendCommand(c,o,s){
+			//var u = h + c;
+			var u = h +'set?p='+ c.substring(2,1);
+			
+			if(s){
+				u += "1";
+			}else{
+				u += "0";
+			}
+			
+			//alert(u)
+			$.get(u, function(d) {
+				if(d.substring(2,1)=='1'){
+					$('#'+o.id).bootstrapSwitch('state', 1, 1);
+				}else{
+					$('#'+o.id).bootstrapSwitch('state', 0, 1);
+				}
+			});
+		}
+		function fn2(){ //setState 
+			var u = h+"s"
+			$.get(u, function(d) {
+	
+				for(var i=1;i<5;i++){
+					
+					var s = parseInt(d.substring(i,i+1),10)
+					var id = 'p'+ i
+					
+					$('#'+id).bootstrapSwitch('disabled', 0, 1);
+					$('#'+id).bootstrapSwitch('state', s, 1);
+					//alert(d+"|"+id+" : "+s)
+				}
+			});
+
+		}
+	</script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#" onclick="fn2();">Smart Switch</a>
+	</div>
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#" onclick="fn2();" data-toggle="collapse" data-target=".navbar-ex1-collapse">Refresh</a></li>
+		</ul>
+	</div>
+</nav>
+<div class="container" align="center">
+	<form>
+		<div class="form-group">
+				<input type="checkbox" name="p1" id="p1" class="sw" disabled="disabled">	
+		</div>
+		<div class="form-group">
+				<input type="checkbox" name="p2" id="p2" class="sw" disabled="disabled">	
+		</div>
+		<div class="form-group">
+				<input type="checkbox" name="p3" id="p3" class="sw" disabled="disabled">	
+		</div>
+		<div class="form-group">
+				<input type="checkbox" name="p4" id="p4" class="sw" disabled="disabled">	
+		</div>
+	</form>
+</div>
+	
+</body>
+</html>
